@@ -1,0 +1,9 @@
+# A .gitignore file made by VitalKanev - completely handcoded by the way :)
+#
+# If you want to learn more, check out the Git Documentation over here:
+# <https://git-scm.com/docs/gitignore>
+
+# Exclude everything created by Visual Studio IDE because it contains an SQLite
+# database, which is BINARY
+.vs/
+*.suo
