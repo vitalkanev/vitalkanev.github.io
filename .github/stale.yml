@@ -1,0 +1,12 @@
+# Needed for 'Stale' app: https://github.com/probot/stale
+daysUntilState: 30
+daysUntilClose: 7
+exemptLabels:
+  - important
+  - security
+  - working
+staleLabel: stale
+markComment: >
+  Sorry but it appears that this issue/PR has not been updated for **30** days. If no activity appears during a week, this issue/PR will be **closed**.
+  
+  *Powered by [Stale](https://github.com/probot/stale)*
