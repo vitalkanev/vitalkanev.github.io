@@ -1,0 +1,28 @@
+name: Mark stale issues and pull requests
+
+on:
+  schedule:
+  - cron: "00 13 * * *" # 13:00 UTC -> 16:00 MSK
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest # 18.04
+    steps:
+    - name: Close Stale Issues
+      uses: actions/stale@v3.0.11
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        stale-issue-message: >
+          Sorry but this issue hasn't been update for **14** days. If nothing happens within a week, this issue will be closed.
+          Thanks.
+        stale-pr-message: >
+          Sorry but this pull request hasn't been update for **14** days. If nothing happens within a week, this pull request will be closed.
+          Thanks.
+        days-before-stale: 14
+        days-before-close: 7.
+        stale-issue-label: "might be outdated"
+        exempt-issue-labels: important,security
+        stale-pr-label: "might be outdated"
+        operations-per-run: 15
+        remove-stale-when-updated: true
+        ascending: false
