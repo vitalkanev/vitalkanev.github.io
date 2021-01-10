@@ -3,5 +3,10 @@
 # If you want to learn more, check out the Git Documentation over here:
 # <https://git-scm.com/docs/gitignore>
 
+# Visual Studio (IDE)
 .vs/
 *.suo
+
+# Macs
+**/__MACOSX
+**/.DS_Store
